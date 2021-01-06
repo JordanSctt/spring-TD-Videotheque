@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajout film</title>
+</head>
+<body>
+
+<h1>Ajouter un film</h1>
+
+<form name="request" action="/film/create" method="post">
+    Titre: <input name="title"/><br/>
+    Auteur: <input name="author"/><br/>
+    Date de sortie: <input type="date" name="dateSortie"/><br/>
+    <input type="submit" value="Ajouter" />
+</form>
+
+</body>
+</html>

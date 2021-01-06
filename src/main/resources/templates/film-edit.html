@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+<h1>Editer un film</h1>
+
+<form name="request" action="/film/edit" method="post">
+    <input type="hidden" name="id" th:value="${film.id}" />
+    Titre: <input name="title" th:value="${film.title}" /><br/>
+    Auteur: <input name="author" th:value="${film.author}" /><br/>
+    Date de sortie: <input type="date" name="dateSortie" th:value="${film.dateSortie}" /><br/>
+    <input type="submit" value="Editer" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+<h1>Liste des Films</h1>
+<table>
+    <thead>
+    <tr>
+        <td>Titre du film</td>
+        <td>Auteur du film</td>
+        <td>Date de Sortie du film</td>
+        <td>Actions</td>
+    </tr>
+
+    </thead>
+    <tbody>
+        <tr th:each="film: ${films}">
+            <td th:text="${film.title}"/>
+            <td th:text="${film.author}"/>
+            <td th:text="${film.dateSortie}"/>
+            <td><a th:href="'/film/edit?id=' + ${film.id}">éditer</a>
+            <a th:href="'/film/delete?id=' + ${film.id}">supprimer</a></td>
+        </tr>
+    </tbody>
+</table>
+<a type="button" th:href="'/film/create'">ajouter</a>
+
+</body>
+
+
+</html>
